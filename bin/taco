@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+#
+# = taco(1)
+#
+# == USAGE
+#  taco add Manage todo items with the shell @anywhere
+#
+# == INSTALL
+# RubyGem:
+#     gem install taco
+
+# require 'taco'
+
+$LOAD_PATH.unshift(File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib')))
+require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'taco.rb'))
+
+Taco::Command.execute(*ARGV)
