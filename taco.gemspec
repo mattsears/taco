@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["matt@mattsears.com"]
   s.homepage    = "http://mattsears.com"
   s.summary     = %q{Hold your stuff in a shell}
-  s.description = %q{Manages todo items from the command line}
+  s.description = %q{Manage todo items from the command line}
   s.rubyforge_project = "taco"
 
   s.files         = `git ls-files`.split("\n")
