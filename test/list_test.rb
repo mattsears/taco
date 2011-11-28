@@ -4,7 +4,7 @@ require 'helper'
 describe Taco::List do
 
   before do
-    Taco::List.any_instance.stubs(:file).returns("test/examples/tacos")
+    Taco::Config.any_instance.stubs(:file).returns("test/examples/tacos")
     @list = Taco::List.new
     @list.clear!
     @list.add 'Take the dog for a walk'
@@ -14,7 +14,7 @@ describe Taco::List do
   end
 
   it "finds the file path of the todo list" do
-    @list.file.must_equal 'test/examples/tacos'
+    Taco.config.file.must_equal 'test/examples/tacos'
   end
 
   it "adds the todo to the stack" do
