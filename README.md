@@ -17,8 +17,12 @@ You may also create an alias to save keystrokes
 Taco can work with multiple list files too.  You can maintain one list
 (default: '~/.tacos') or project-specific taco files.
 
-Create a taco
---------
+
+Making a Taco
+----------
+
+### Add items
+
 We don't have to use quotes!
 
     $ taco add Check out rubyrags.com
@@ -31,8 +35,8 @@ We don't have to use quotes!
     $ taco add Buy Ruby Nerd shirt from rubyrags.com
     Add: (3) Buy Ruby Nerd shirt from rubyrags.com
 
-List items
-----------
+### List items
+
 Prints the items is a nice, tabbed format.
 
     $ taco list
@@ -44,8 +48,8 @@ Prints the items is a nice, tabbed format.
     1: Buy Ruby Nerd shirt from rubyrags.com       @work
     2: Buy Duck Typing shirt from rubyrags.com     @work
 
-Deleting items
-----------
+### Deleting items
+
 Use the item number to `delete` it. `del` also works.
 
     $ taco delete 1
@@ -55,15 +59,15 @@ Use the item number to `delete` it. `del` also works.
     $ taco clear
     All 3 items cleared!
 
-Completing items
-----------
+### Completing items
+
 Use the item number to complete the item.  This will simply archive the item
 
     $ taco done 2
     Done: (2) Buy Duck Typing shirt from rubyrags.com    @work
 
-Prioritizing items
-----------
+### Prioritizing items
+
 To bump an item higher on the list:
 
     $ taco bump 2
