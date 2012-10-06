@@ -11,7 +11,6 @@ module Taco
     end
 
     def self.backend
-      #Taco::Storage.const_get(Taco.config[:storage].capitalize).new
       Taco::Storage.const_get('Yaml').new
     end
 

@@ -26,6 +26,7 @@ module Taco
   def execute(*args)
     @options = parse_options(*args)
     command = args.shift || 'list'
+
     case command.to_sym
     when :list, :ls
       List.new(:filter => args.first).list
@@ -39,7 +40,7 @@ module Taco
       puts "Done: #{List.new.done(args.shift.to_i)}"
       List.new.list
     when :edit
-      system("`echo $EDITOR` #{List.new.file} &")
+      system("`echo $EDITOR` #{storage.file} &")
     when :clear
       puts "All #{List.new.clear!} todos cleared! #{List.new.clear!}"
     when :bump

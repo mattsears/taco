@@ -12,7 +12,7 @@ module Taco
     #
     # Returns the unpersisted Item instance.
     def initialize(value)
-      @context = value.scan(/@[A-Z0-9.-]+/i).last || '@next'
+      @context = value.scan(/@[A-Z0-9.-]+/i).last || '@'
       @text    = value.gsub(context, '').strip
     end
 

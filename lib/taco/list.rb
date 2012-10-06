@@ -21,9 +21,9 @@ module Taco
     #   @todo.add('lorem epsim etc @work')
     #
     # Returns the add todo Item
-    def add(todo)
+    def add(item)
       save do
-        items.push(Item.new(todo)).last
+        items.push(Item.new(item)).last
       end
     end
 
@@ -65,7 +65,7 @@ module Taco
       items.each_with_index do |item, index|
         if item.context.to_s == @options[:filter] || @options[:filter].nil?
           printf("[%s] %-#{max_length(:text)+padding}s%s\n",
-            index+1, item.text, colorize(item.context, :cyan))
+            index+1, item.text, colorize(item.context.gsub('@',''), :cyan))
         end
       end
     end
@@ -111,6 +111,9 @@ module Taco
       returning
     end
 
+    # Shortcut to Taco.storage.items
+    #
+    # Returns Array of Taco::Items
     def items
       Taco.storage.items
     end
