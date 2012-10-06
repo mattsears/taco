@@ -1,9 +1,6 @@
 # File storage for Taco
 #
 #
-#
-#
-#
 module Taco
   module Storage
     class Yaml
@@ -18,7 +15,7 @@ module Taco
       end
 
       # The main tacos in the user's home directory
-      FILE = File.expand_path('.tacos')
+      FILE = File.expand_path('.tacos.yml')
 
       attr_accessor :items
 
@@ -26,7 +23,7 @@ module Taco
       #
       # Returns String file path
       def file
-        @file ||= File.exist?(FILE) ? FILE : "#{ENV['HOME']}/.tacos"
+        @file ||= File.exist?(FILE) ? FILE : "#{ENV['HOME']}/.tacos.yml"
       end
 
       # Formats the current set of todos
