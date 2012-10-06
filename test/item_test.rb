@@ -1,5 +1,4 @@
-$:.unshift File.dirname(__FILE__)
-require 'helper'
+require_relative 'helper'
 
 describe Taco::Item do
 

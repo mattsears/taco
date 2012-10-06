@@ -1,29 +1,23 @@
-$:.unshift File.dirname(__FILE__)
-require 'helper'
+require_relative 'helper'
 
 describe Taco::List do
 
   before do
-    Taco::Config.any_instance.stubs(:file).returns("test/examples/tacos")
-    @list = Taco::List.new
-    @list.clear!
-    @list.add 'Take the dog for a walk'
-    @list.add 'Pay lease bill @work'
-    @list.add 'Buy Duck Typing from RubyRags @home'
-    @list.add 'Buy Ruby Nerd from RubyRags @home'
-  end
-
-  it "finds the file path of the todo list" do
-    Taco.config.file.must_equal 'test/examples/tacos'
+    setup_files
+    @list = setup_list
   end
 
   it "adds the todo to the stack" do
     @list.items.size.must_equal 4
   end
 
+  it 'assigns a default tag unless provided' do
+    @list.items.first.context.must_equal '@'
+  end
+
   it "creates a hash of attributes from the todo items" do
     Taco.storage.to_hash.must_equal({
-        :@next => ["Take the dog for a walk"],
+        :"@" => ["Take the dog for a walk"],
         :@work => ["Pay lease bill"],
         :@home => ["Buy Duck Typing from RubyRags", "Buy Ruby Nerd from RubyRags"]
       })
@@ -36,8 +30,8 @@ describe Taco::List do
 
   it 'completes a todo' do
     @list.done(2).context.must_equal "@done"
+    @list.done(3).context.must_equal "@done"
   end
-
 
   it 'should move the specific item to the top' do
     @list.bump(3)
