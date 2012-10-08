@@ -26,7 +26,11 @@ Making a Taco
 We don't have to use quotes!
 
     $ taco add Check out rubyrags.com
-    Add: (1) Check out rubyrags.com
+    Added: Check out rubyrags.com: @
+
+    TACOS:
+    ----------------------------------------------------
+    [1] Check out rubyrags.com                      
 
     # Create a new item with context
     $ taco add Buy Duck Typing shirt from rubyrags.com @work
