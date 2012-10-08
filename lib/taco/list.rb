@@ -68,6 +68,9 @@ module Taco
             index+1, item.text, colorize(item.context.gsub('@',''), :cyan))
         end
       end
+
+      puts '-'*(max_length(:text) + max_length(:context) + padding + 3)
+      puts ""
     end
 
     # Finds the longest string given the Item attribute
