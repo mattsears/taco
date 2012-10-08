@@ -42,7 +42,8 @@ module Taco
     when :edit
       system("`echo $EDITOR` #{storage.file} &")
     when :clear
-      puts "All #{List.new.clear!} todos cleared! #{List.new.clear!}"
+      puts "All #{List.new.items.count} items cleared!\n"
+      List.new.clear!
     when :bump
       puts "Bump: #{List.new.bump(args.shift.to_i)}"
       List.new.list
