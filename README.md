@@ -36,7 +36,6 @@ We don't have to use quotes!
     $ taco add Buy Duck Typing shirt from rubyrags.com @work
     Added: Buy Duck Typing shirt from rubyrags.com: @work
 
-
     TACOS:
     ----------------------------------------------------
     [1] Check out rubyrags.com                      
@@ -84,7 +83,7 @@ Use the item number to `delete` it. `del` also works.
 
     # To delete all the todos:
     $ taco clear
-    All 3 items cleared!
+    All items cleared!
 
 ### Completing items
 
