@@ -88,7 +88,8 @@ Use the item number to `delete` it. `del` also works.
     [2] Buy Ruby Nerd shirt from rubyrags.com       work
     ----------------------------------------------------     
 
-    # To delete all the todos:
+To delete all the todos:
+
     $ taco clear
     All 2 items cleared!
 
