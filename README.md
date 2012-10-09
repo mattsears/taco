@@ -67,7 +67,7 @@ Prints the items in a nice, tabbed format.
     [3] Buy Ruby Nerd shirt from rubyrags.com       work
     ----------------------------------------------------
 
-    $ todo list @work
+    $ taco list @work
 
     TACOS:
     ----------------------------------------------------
