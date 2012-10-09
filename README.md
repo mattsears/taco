@@ -26,52 +26,86 @@ Making a Taco
 We don't have to use quotes!
 
     $ taco add Check out rubyrags.com
-    Add: (1) Check out rubyrags.com
+    Added: Check out rubyrags.com: @
 
-    # Create a new item with context
+    TACOS:
+    ----------------------------------------------------
+    [1] Check out rubyrags.com
+    ----------------------------------------------------                      
+
+Create a new item with context.
+
     $ taco add Buy Duck Typing shirt from rubyrags.com @work
-    Add: (2) Buy Duck Typing shirt from rubyrags.com @work
+    Added: Buy Duck Typing shirt from rubyrags.com: @work
 
-    $ taco add Buy Ruby Nerd shirt from rubyrags.com
-    Add: (3) Buy Ruby Nerd shirt from rubyrags.com
+    TACOS:
+    ----------------------------------------------------
+    [1] Check out rubyrags.com                      
+    [2] Buy Duck Typing shirt from rubyrags.com     work
+    ----------------------------------------------------
+
+    $ taco add Buy Ruby Nerd shirt from rubyrags.com @work
+    Added: Buy Ruby Nerd shirt from rubyrags.com: @work
+
+    TACOS:
+    ----------------------------------------------------
+    [1] Check out rubyrags.com                      
+    [2] Buy Duck Typing shirt from rubyrags.com     work
+    [3] Buy Ruby Nerd shirt from rubyrags.com       work
+    ----------------------------------------------------
 
 ### List items
 
-Prints the items is a nice, tabbed format.
+Prints the items in a nice, tabbed format.
 
     $ taco list
-    1. Check out rubyrags.com
-    2: Buy Ruby Nerd shirt from rubyrags.com       @work
-    3: Buy Duck Typing shirt from rubyrags.com     @work
 
-    $ todo list @work
-    1: Buy Ruby Nerd shirt from rubyrags.com       @work
-    2: Buy Duck Typing shirt from rubyrags.com     @work
+    TACOS:
+    ----------------------------------------------------
+    [1] Check out rubyrags.com                      
+    [2] Buy Duck Typing shirt from rubyrags.com     work
+    [3] Buy Ruby Nerd shirt from rubyrags.com       work
+    ----------------------------------------------------
+
+    $ taco list @work
+
+    TACOS:
+    ----------------------------------------------------
+    [2] Buy Duck Typing shirt from rubyrags.com     work
+    [3] Buy Ruby Nerd shirt from rubyrags.com       work
+    ----------------------------------------------------
 
 ### Deleting items
 
 Use the item number to `delete` it. `del` also works.
 
     $ taco delete 1
-    Deleted: (1) Check out rubyrags.com
+    Deleted: Check out rubyrags.com: @
 
-    # To delete all the todos:
+    TACOS:
+    ----------------------------------------------------              
+    [1] Buy Duck Typing shirt from rubyrags.com     work
+    [2] Buy Ruby Nerd shirt from rubyrags.com       work
+    ----------------------------------------------------     
+
+To delete all the items:
+
     $ taco clear
-    All 3 items cleared!
+    All 2 items cleared!
 
 ### Completing items
 
-Use the item number to complete the item.  This will simply archive the item
+Use the item number to complete the item.  This will simply archive the item.
 
     $ taco done 2
-    Done: (2) Buy Duck Typing shirt from rubyrags.com    @work
+    Done: Buy Duck Typing shirt from rubyrags.com: @done
 
 ### Prioritizing items
 
 To bump an item higher on the list:
 
     $ taco bump 2
-    Bump: (2) Buy Duck Typing shirt from rubyrags.com    @work
+    Bump: Buy Duck Typing shirt from rubyrags.com: @work
 
 Help
 ----------
@@ -90,10 +124,10 @@ Then you can see your list in a beautifully formated yaml file!
 
 Ohai, Command Line!
 ----------
-Since it's the command line we have all the goodies available to use
+Since it's the command line we have all the goodies available to use.
 
     $ taco list | grep Nerd
-    2: Buy Ruby Nerd shirt from rubyrags.com   @work
+    [2] Buy Ruby Nerd shirt from rubyrags.com       work
 
 
 
