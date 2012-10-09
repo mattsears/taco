@@ -30,9 +30,11 @@ We don't have to use quotes!
 
     TACOS:
     ----------------------------------------------------
-    [1] Check out rubyrags.com                      
+    [1] Check out rubyrags.com
+    ----------------------------------------------------                      
 
-    # Create a new item with context
+Create a new item with context
+
     $ taco add Buy Duck Typing shirt from rubyrags.com @work
     Added: Buy Duck Typing shirt from rubyrags.com: @work
 
@@ -40,6 +42,7 @@ We don't have to use quotes!
     ----------------------------------------------------
     [1] Check out rubyrags.com                      
     [2] Buy Duck Typing shirt from rubyrags.com     work
+    ----------------------------------------------------
 
     $ taco add Buy Ruby Nerd shirt from rubyrags.com @work
     Added: Buy Ruby Nerd shirt from rubyrags.com: @work
@@ -49,10 +52,11 @@ We don't have to use quotes!
     [1] Check out rubyrags.com                      
     [2] Buy Duck Typing shirt from rubyrags.com     work
     [3] Buy Ruby Nerd shirt from rubyrags.com       work
+    ----------------------------------------------------
 
 ### List items
 
-Prints the items is a nice, tabbed format.
+Prints the items in a nice, tabbed format.
 
     $ taco list
 
@@ -61,6 +65,7 @@ Prints the items is a nice, tabbed format.
     [1] Check out rubyrags.com                      
     [2] Buy Duck Typing shirt from rubyrags.com     work
     [3] Buy Ruby Nerd shirt from rubyrags.com       work
+    ----------------------------------------------------
 
     $ todo list @work
 
@@ -68,6 +73,7 @@ Prints the items is a nice, tabbed format.
     ----------------------------------------------------
     [2] Buy Duck Typing shirt from rubyrags.com     work
     [3] Buy Ruby Nerd shirt from rubyrags.com       work
+    ----------------------------------------------------
 
 ### Deleting items
 
@@ -79,11 +85,12 @@ Use the item number to `delete` it. `del` also works.
     TACOS:
     ----------------------------------------------------              
     [1] Buy Duck Typing shirt from rubyrags.com     work
-    [2] Buy Ruby Nerd shirt from rubyrags.com       work      
+    [2] Buy Ruby Nerd shirt from rubyrags.com       work
+    ----------------------------------------------------     
 
     # To delete all the todos:
     $ taco clear
-    All items cleared!
+    All 2 items cleared!
 
 ### Completing items
 
